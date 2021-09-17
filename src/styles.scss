@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'src/variables' as c;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  //background-color: c.$primary-color;
+  color: c.$primary-font-color;
+  height: 100%;
+}
+html, button  {
+  font-family: 'Ubuntu', sans-serif;
+}
+countdown {
+  font-size: 50px;
+  margin-top: 5%;
+}
+.row {
+  justify-content: center;
+}
+.container-fluid {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  color: c.$primary-font-color;
+  border-width: 2px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color:seashell;
+}
+.work {
+  background-color: c.$primary-color;
+}
+.short {
+  background-color: c.$secondary-color;
+}
+.long {
+  background-color: c.$tertiary-color
+}

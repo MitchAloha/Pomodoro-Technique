@@ -1,0 +1,25 @@
+@use 'src/variables' as c;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:host {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+html, body {
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 7%;
+  margin-bottom: 5%;
+  font-size: 60px;
+}
+

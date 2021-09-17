@@ -1,0 +1,21 @@
+@use 'src/variables' as c;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+html, body, button{
+  font-family: 'Ubuntu', sans-serif;
+}
+button {
+  font-size: 25px;
+}
+mat-toolbar {
+  justify-content: space-around;
+}
+
+@media(max-width:1000px) {
+  mat-toolbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+}

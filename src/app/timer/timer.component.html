@@ -1,0 +1,20 @@
+<body [ngClass]="{'work': working, 'short': s_break, 'long': l_break }">
+  <main>
+    <div class="container-fluid">
+      <app-toolbar [disabled1]="!working" [disabled2]="!s_break" [disabled3]="!l_break"></app-toolbar>
+
+      <div class="row">
+        <app-timer-pomodoro *ngIf="working || starting" [taskExist]="input.value?.length > 0" [task]="input.value"></app-timer-pomodoro>
+        <app-timer-short *ngIf="s_break"></app-timer-short>
+        <app-timer-long *ngIf="l_break"></app-timer-long>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <mat-form-field>
+      <mat-label>The task you're working on:</mat-label>
+      <input matInput #input>
+    </mat-form-field>
+  </section>
+</body>

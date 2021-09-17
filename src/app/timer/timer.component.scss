@@ -1,0 +1,40 @@
+@use 'src/variables' as c;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+html, body, input, mat-label  {
+  font-family: 'Ubuntu', sans-serif;
+}
+section {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+#start {
+  width: 40%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  color: c.$primary-color;
+  font-size: 25px;
+  border-color: c.$primary-color;
+  border-width: 2px;
+  background-color: c.$primary-font-color;
+  &:hover {
+    background-color: c.$primary-color;
+    color: c.$primary-font-color;
+    border-color: c.$primary-font-color;
+  }
+}
+mat-form-field {
+  width: 40%;
+  margin-top: 7%;
+  font-size: 25px;
+  border-width: 3px;
+  color: c.$primary-font-color;
+}
+@media(max-width:1000px) {
+  .container-fluid {
+    height: 500px;
+  }
+  mat-form-field {
+    width: 90%;
+  }
+}

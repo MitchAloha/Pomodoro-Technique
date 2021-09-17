@@ -1,0 +1,16 @@
+<body [ngClass]="{'work': working, 'short': s_break, 'long': l_break }">
+<div style="display: none">{{ message | async | json }}</div>
+  <countdown #cd [config]="config"></countdown>
+
+
+  <div class="row">
+    <p>You deserve a short break!</p>
+  </div>
+
+  <div class="row">
+      <button type="button"
+        class="btn btn-lg btn-block rounded-pill" id="start" (click)="onShort()"
+        [disabled]="disabled">Start</button>
+  </div>
+
+</body>

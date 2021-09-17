@@ -1,0 +1,23 @@
+<body>
+<div style="display: none">{{ message | async | json }}</div>
+  <countdown #cd [config]="config"></countdown>
+
+  <div class="row" *ngIf="taskExist">
+    <h5>Task:</h5>
+    <p>{{ task }}</p>
+  </div>
+
+  <div class="row">
+    <p>Time to work!</p>
+  </div>
+
+  <div class="row">
+    <div matTooltip="Choose a task first"
+      [matTooltipDisabled]="taskExist && started">
+      <button type="button"
+        [disabled]="!taskExist || started"
+        class="btn btn-lg btn-block rounded-pill" id="start" (click)="onPomodoro()">Start</button>
+      </div>
+  </div>
+
+</body>
